@@ -19,7 +19,7 @@ if [ -f "$PLUGIN_DIR/manifest.yaml" ]; then
   VERSION=$(grep -E "^version:" "$PLUGIN_DIR/manifest.yaml" | cut -d ":" -f2 | xargs)
 
   if [ -n "$AUTHOR" ] && [ -n "$VERSION" ]; then
-    OUTPUT_NAME="$PLUGIN_DIR-$AUTHOR-$VERSION"
+    OUTPUT_NAME="$AUTHOR-$PLUGIN_DIR-$VERSION"
   else
     OUTPUT_NAME="$PLUGIN_DIR"
   fi
