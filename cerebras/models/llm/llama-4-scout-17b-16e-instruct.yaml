@@ -1,7 +1,7 @@
-model: llama-3.3-70b
+model: llama-4-scout-17b-16e-instruct
 label:
-  zh_Hans: llama-3.3-70b
-  en_US: llama-3.3-70b
+  zh_Hans: llama-4-scout-17b-16e-instruct
+  en_US: llama-4-scout-17b-16e-instruct
 model_type: llm
 features:
   - multi-tool-call
@@ -51,7 +51,7 @@ parameter_rules:
   - name: json_schema
     use_template: json_schema
 pricing:
-  input: "0.85"
-  output: "1.20"
+  input: "0.65"
+  output: "0.85"
   unit: "0.000001"
   currency: USD
