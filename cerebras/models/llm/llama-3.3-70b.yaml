@@ -1,7 +1,7 @@
 model: llama-3.3-70b
 label:
-  zh_Hans: llama-3.3-70b
-  en_US: llama-3.3-70b
+  zh_Hans: Llama 3.3 70B
+  en_US: Llama 3.3 70B
 model_type: llm
 features:
   - multi-tool-call

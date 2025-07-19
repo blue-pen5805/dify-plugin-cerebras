@@ -1,7 +1,7 @@
 model: llama-4-scout-17b-16e-instruct
 label:
-  zh_Hans: llama-4-scout-17b-16e-instruct
-  en_US: llama-4-scout-17b-16e-instruct
+  zh_Hans: Llama 4 Scout
+  en_US: Llama 4 Scout
 model_type: llm
 features:
   - multi-tool-call
