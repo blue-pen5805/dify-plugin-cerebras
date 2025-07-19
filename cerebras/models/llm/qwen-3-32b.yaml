@@ -1,7 +1,7 @@
 model: qwen-3-32b
 label:
-  zh_Hans: Qwen 3 235B
-  en_US: Qwen 3 235B
+  zh_Hans: Qwen 3 32B
+  en_US: Qwen 3 32B
 model_type: llm
 features:
   - multi-tool-call
