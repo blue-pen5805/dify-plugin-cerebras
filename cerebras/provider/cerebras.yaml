@@ -37,9 +37,9 @@ provider_credential_schema:
         en_US: Enter your API Base, e.g. https://api.cerebras.ai/v1
 models:
   llm:
+    position: models/llm/_position.yaml
     predefined:
       - "models/llm/*.yaml"
-
 extra:
   python:
     model_sources:
