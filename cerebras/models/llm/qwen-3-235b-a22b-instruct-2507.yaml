@@ -1,0 +1,57 @@
+model: qwen-3-235b-a22b-instruct-2507
+label:
+  zh_Hans: Qwen 3 235B Instruct
+  en_US: Qwen 3 235B Instruct
+model_type: llm
+features:
+  - multi-tool-call
+  - agent-thought
+  - stream-tool-call
+model_properties:
+  mode: chat
+  context_size: 65536
+parameter_rules:
+  - name: temperature
+    use_template: temperature
+    min: 0
+    max: 1.5
+  - name: top_p
+    use_template: top_p
+    min: 0
+    max: 1
+  - name: max_tokens
+    use_template: max_tokens
+    default: 1024
+    min: 1
+    max: 8192
+  - name: seed
+    label:
+      en_US: Seed
+    type: int
+    help:
+      en_US:
+        If specified, model will make a best effort to sample deterministically,
+        such that repeated requests with the same seed and parameters should return
+        the same result. Determinism is not guaranteed, and you should refer to the
+        system_fingerprint response parameter to monitor changes in the backend.
+    required: false
+  - name: response_format
+    label:
+      zh_Hans: 回复格式
+      en_US: Response Format
+    type: string
+    help:
+      zh_Hans: 指定模型必须输出的格式
+      en_US: specifying the format that the model must output
+    required: false
+    options:
+      - text
+      - json_object
+      - json_schema
+  - name: json_schema
+    use_template: json_schema
+pricing:
+  input: "0.60"
+  output: "1.20"
+  unit: "0.000001"
+  currency: USD
