@@ -1,7 +1,7 @@
-model: qwen-3-235b-a22b-instruct-2507
+model: qwen-3-235b-a22b-thinking-2507
 label:
-  zh_Hans: Qwen 3 235B Instruct
-  en_US: Qwen 3 235B Instruct
+  zh_Hans: Qwen 3 235B Thinking
+  en_US: Qwen 3 235B Thinking
 model_type: llm
 features:
   - multi-tool-call
@@ -9,7 +9,7 @@ features:
   - stream-tool-call
 model_properties:
   mode: chat
-  context_size: 64000
+  context_size: 65536
 parameter_rules:
   - name: temperature
     use_template: temperature
