@@ -23,7 +23,20 @@ parameter_rules:
     use_template: max_tokens
     default: 1024
     min: 1
-    max: 8192
+    max: 65536
+  - name: reasoning_effort
+    label:
+      zh_Hans: 推理工作
+      en_US: reasoning_effort
+    type: string
+    help:
+      zh_Hans: 限制推理模型的推理工作
+      en_US: constrains effort on reasoning for reasoning models
+    required: false
+    options:
+      - low
+      - medium
+      - high
   - name: seed
     label:
       en_US: Seed
