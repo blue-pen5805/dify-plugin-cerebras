@@ -28,12 +28,12 @@ parameter_rules:
     label:
       zh_Hans: 禁用推理
       en_US: Disable Reasoning
-    type: bool
-    default: false
+    type: boolean
     help:
       zh_Hans: 发送 disable_reasoning 参数以关闭默认启用的推理功能
       en_US: Send disable_reasoning to turn off the default reasoning behavior
     required: false
+    default: false
   - name: seed
     label:
       en_US: Seed
