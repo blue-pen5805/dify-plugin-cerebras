@@ -1,0 +1,67 @@
+model: zai-glm-4.6
+label:
+  zh_Hans: Z.ai GLM 4.6
+  en_US: Z.ai GLM 4.6
+model_type: llm
+features:
+  - multi-tool-call
+  - agent-thought
+  - stream-tool-call
+model_properties:
+  mode: chat
+  context_size: 131072
+parameter_rules:
+  - name: temperature
+    use_template: temperature
+    min: 0
+    max: 1.5
+  - name: top_p
+    use_template: top_p
+    min: 0
+    max: 1
+  - name: max_tokens
+    use_template: max_tokens
+    default: 1024
+    min: 1
+    max: 40000
+  - name: disable_reasoning
+    label:
+      zh_Hans: 禁用推理
+      en_US: Disable Reasoning
+    type: bool
+    default: false
+    help:
+      zh_Hans: 发送 disable_reasoning 参数以关闭默认启用的推理功能
+      en_US: Send disable_reasoning to turn off the default reasoning behavior
+    required: false
+  - name: seed
+    label:
+      en_US: Seed
+    type: int
+    help:
+      en_US:
+        If specified, model will make a best effort to sample deterministically,
+        such that repeated requests with the same seed and parameters should return
+        the same result. Determinism is not guaranteed, and you should refer to the
+        system_fingerprint response parameter to monitor changes in the backend.
+    required: false
+  - name: response_format
+    label:
+      zh_Hans: 回复格式
+      en_US: Response Format
+    type: string
+    help:
+      zh_Hans: 指定模型必须输出的格式
+      en_US: specifying the format that the model must output
+    required: false
+    options:
+      - text
+      - json_object
+      - json_schema
+  - name: json_schema
+    use_template: json_schema
+pricing:
+  input: "2.25"
+  output: "2.75"
+  unit: "0.000001"
+  currency: USD

@@ -38,6 +38,14 @@ class CerebrasLargeLanguageModel(OAICompatLargeLanguageModel):
         user: Optional[str] = None,
     ) -> Union[LLMResult, Generator]:
         self._add_custom_parameters(credentials)
+
+        extra_body = {}
+        disable_reasoning = model_parameters.pop("disable_reasoning", None)
+        if isinstance(disable_reasoning, bool):
+            extra_body["disable_reasoning"] = disable_reasoning
+        if extra_body:
+            model_parameters["extra_body"] = extra_body
+
         return super()._invoke(model, credentials, prompt_messages, model_parameters, tools, stop, stream)
 
     def validate_credentials(self, model: str, credentials: dict) -> None:
