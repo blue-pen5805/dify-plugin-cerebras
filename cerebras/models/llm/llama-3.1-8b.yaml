@@ -1,4 +1,4 @@
-model: llama-3.1-8b
+model: llama3.1-8b
 label:
   zh_Hans: Llama 3.1 8B
   en_US: Llama 3.1 8B
