@@ -4,6 +4,7 @@ label:
   en_US: Z.ai GLM 4.6
 model_type: llm
 features:
+  - tool-call
   - multi-tool-call
   - agent-thought
   - stream-tool-call

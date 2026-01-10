@@ -4,6 +4,7 @@ label:
   en_US: Qwen 3 235B Instruct
 model_type: llm
 features:
+  - tool-call
   - multi-tool-call
   - agent-thought
   - stream-tool-call

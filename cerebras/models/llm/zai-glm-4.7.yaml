@@ -4,6 +4,7 @@ label:
   en_US: Z.ai GLM 4.7
 model_type: llm
 features:
+  - tool-call
   - multi-tool-call
   - agent-thought
   - stream-tool-call
@@ -34,6 +35,16 @@ parameter_rules:
       en_US: Send disable_reasoning to turn off the default reasoning behavior
     required: false
     default: false
+  - name: clear_thinking
+    label:
+      zh_Hans: 清除思考内容
+      en_US: Clear Thinking
+    type: boolean
+    help:
+      zh_Hans:  使用 clear_thinking 参数来控制是否将前几轮的思考内容包含在提示上下文中。默认为 true（排除之前的思考内容）。
+      en_US: Use the clear_thinking parameter to control whether thinking content from previous turns is included in the prompt context. Defaults to true (exclude previous thinking).
+    required: false
+    default: true
   - name: seed
     label:
       en_US: Seed

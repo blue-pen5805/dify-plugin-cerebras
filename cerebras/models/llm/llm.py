@@ -29,6 +29,7 @@ class CerebrasLargeLanguageModel(OAICompatLargeLanguageModel):
     _REASONING_MODELS: set[str] = {
         "gpt-oss-120b",
         "zai-glm-4.6",
+        "zai-glm-4.7",
     }
 
     def _invoke(
@@ -61,6 +62,7 @@ class CerebrasLargeLanguageModel(OAICompatLargeLanguageModel):
     def _add_custom_parameters(credentials: dict) -> None:
         credentials["mode"] = "chat"
 
+    # While Cerebras supports a stream parameter, note that streaming is not supported when using reasoning models with JSON mode or tool calling.
     def _should_disable_stream(
         self,
         model: str,
